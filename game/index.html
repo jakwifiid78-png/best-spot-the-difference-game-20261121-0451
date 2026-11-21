@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasar Malam Kembar — Cari Perbedaannya!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>🏮 Pasar Malam Kembar</h1>
+    <p class="sub">Dua gambar pasar malam yang nyaris sama — ada <b>8 perbedaan</b>. Klik perbedaannya di gambar kiri ATAU kanan!</p>
+  </div>
+  <div class="hud">
+    <div id="counter" class="pill big">Ditemukan 0 dari 8 • Sisa 8</div>
+    <div id="timer" class="pill">⏱ 00:00</div>
+    <div id="score" class="pill">Skor 0</div>
+  </div>
+</header>
+
+<main class="boards">
+  <section class="panel" id="leftPanel">
+    <div class="panel-title"><span class="tag">A</span> Gambar Asli — Pasar Malam</div>
+    <canvas id="left" width="640" height="420"></canvas>
+  </section>
+  <section class="panel" id="rightPanel">
+    <div class="panel-title"><span class="tag">B</span> Gambar Kembar — ada yang beda!</div>
+    <canvas id="right" width="640" height="420"></canvas>
+  </section>
+</main>
+
+<div class="controls">
+  <button id="hintBtn" type="button">💡 Hint (3 tersisa)</button>
+  <button id="restartBtn" type="button">↻ Ulang dari awal</button>
+  <button id="soundBtn" type="button">🔊 Suara nyala</button>
+  <span class="keys">Keyboard: <b>H</b> hint &nbsp;•&nbsp; <b>R</b> ulang &nbsp;•&nbsp; <b>M</b> suara</span>
+</div>
+
+<div id="foundList" class="chips"></div>
+
+<p class="howto">Cara main: klik tepat di bagian yang berbeda (lingkaran hijau = ketemu, silang merah = salah, −10 poin). Hint menunjukkan satu perbedaan yang belum ketemu selama 3 detik (−50 poin, maks 3×). Temukan semua 8 perbedaan untuk menang!</p>
+
+<div id="winOverlay" class="overlay">
+  <div class="win-card">
+    <div class="win-emoji">🎉</div>
+    <h2>SEMUA PERBEDAAN KETEMU!</h2>
+    <div id="winStars" class="stars">★★★</div>
+    <p id="winStats"></p>
+    <p class="win-sub">Kamu mata elang pasar malam! 🦅</p>
+    <button id="againBtn" type="button">Main lagi ↻</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

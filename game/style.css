@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 18px 22px 28px;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #160f2e;
+  color: #fff3e0;
+}
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; max-width: 1360px; margin: 0 auto; }
+h1 { margin: 0; font-size: 34px; color: #ffd23e; letter-spacing: 0.5px; }
+.sub { margin: 6px 0 0; font-size: 15px; color: #e8d5ff; }
+.hud { display: flex; gap: 10px; flex-wrap: wrap; }
+.pill {
+  background: #2a1f4d; border: 2px solid #8338ec; border-radius: 999px;
+  padding: 9px 16px; font-size: 15px; font-weight: bold;
+}
+.pill.big { background: #e63946; border-color: #ffd23e; font-size: 17px; }
+.boards {
+  display: flex; gap: 18px; justify-content: center;
+  max-width: 1360px; margin: 16px auto 0; flex-wrap: wrap;
+}
+.panel { position: relative; flex: 1 1 620px; max-width: 668px; }
+.panel-title {
+  font-size: 17px; font-weight: bold; margin-bottom: 8px; color: #ffd23e;
+}
+.tag {
+  display: inline-block; background: #ffd23e; color: #160f2e;
+  border-radius: 50%; width: 26px; height: 26px; line-height: 26px;
+  text-align: center; margin-right: 6px; font-size: 15px;
+}
+canvas {
+  width: 100%; height: auto; display: block;
+  border: 4px solid #8338ec; border-radius: 12px;
+  cursor: crosshair; background: #141a38;
+}
+.controls { display: flex; gap: 10px; align-items: center; max-width: 1360px; margin: 16px auto 0; flex-wrap: wrap; }
+button {
+  font-family: inherit; font-size: 16px; font-weight: bold;
+  background: #ffd23e; color: #160f2e; border: none; border-radius: 10px;
+  padding: 11px 20px; cursor: pointer;
+}
+button:hover:not(:disabled) { background: #ffe066; }
+button:disabled { opacity: 0.45; cursor: default; }
+#restartBtn { background: #2ec4b6; color: #06231f; }
+#soundBtn { background: #8338ec; color: #fff; }
+.keys { font-size: 14px; color: #c9b8ec; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; max-width: 1360px; margin: 14px auto 0; }
+.chip {
+  background: #2a1f4d; border: 2px solid #5a4a8a; border-radius: 999px;
+  padding: 6px 13px; font-size: 14px; color: #c9b8ec;
+}
+.chip.done { background: #14532d; border-color: #2ee66b; color: #b7f7c9; }
+.howto { max-width: 1360px; margin: 14px auto 0; font-size: 14px; color: #c9b8ec; line-height: 1.5; }
+.hint-ring {
+  position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px;
+  border: 4px solid #ffd23e; border-radius: 50%;
+  animation: pulse 0.7s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes pulse { from { transform: scale(0.85); opacity: 0.65; } to { transform: scale(1.15); opacity: 1; } }
+.overlay {
+  position: fixed; inset: 0; display: none;
+  align-items: center; justify-content: center;
+  background: rgba(10, 5, 25, 0.72); z-index: 10;
+}
+.overlay.show { display: flex; }
+.win-card {
+  background: #241a3d; border: 3px solid #ffd23e; border-radius: 18px;
+  padding: 34px 48px; text-align: center; max-width: 520px;
+}
+.win-emoji { font-size: 52px; }
+.win-card h2 { color: #ffd23e; margin: 8px 0; font-size: 28px; }
+.stars { font-size: 34px; color: #ffd23e; letter-spacing: 6px; }
+#winStats { font-size: 16px; }
+.win-sub { color: #c9b8ec; }
+#againBtn { margin-top: 10px; font-size: 18px; padding: 13px 28px; }
